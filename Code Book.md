@@ -55,11 +55,18 @@ The header/field name of the final Tidy Dataset were change to make those more H
 
 All those changes were executed based in the content of a file named:  features_info located in the directory \data\UCI HAR Dataset\ 
 
-|** Raw data**	| **Tidy data**| 
-| label		| New label| 
+|** Raw data**		| **Tidy data**| 
+
+| label			| New label| 
+
 | tGravityAcc-std()-X	|time-GravityAccelerometer-std-X| 
+
 | tGravityAcc-std()-Y	|time-GravityAccelerometer-std-Y|         
+
 | tGravityAcc-mean()-Z	|time-GravityAccelerometer-mean-Z|  
+
 | tBodyGyroJerkMag-std()|time-BodyGyroscopeJerkMagnitude-std| 
+
 | fBodyAcc-mean()-X	|frequency-BodyAccelerometer-mean-X|           
+
 | fBodyAcc-mean()-Y	|frequency-BodyAccelerometer-mean-Y| 
