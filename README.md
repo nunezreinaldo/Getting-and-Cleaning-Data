@@ -39,32 +39,30 @@ Extra step: A final extra step is included at the end to create a file with the 
 ###  Preliminar step A. - Download the file and put the file in the data folder
 
 ### Preliminar step B. - Unzip the file
-    unzip from  library(utils)
 
 ### Preliminar step C. - Read the Readme file located on data\UCI HAR Dataset
 
-### Preliminar step D. 
+### Preliminar step D. - Read the files
  Set the path to read all the files then read all files to be used
  Not sure what good name to give toe ach file; I settle 
  for the almost default file name.
 
- -------------------------------------------------------
 ### Assigments Steps
- -------------------------------------------------------
+
 1. Merges the training and the test sets to create one data set.                             
  At this point NOT sure how each merge would be used at this point.
  xtrain and xtest needs to be merge together (append) since got the same number of variables with the same type and name
  ytrain and ytest needs to be merge together (append) since both files got an unique variable with the same type and name
  subjecttrain and subjecttest needs to be merge together (append) since both files got an unique variable with the same type and name
  xall, yall and subjectall will be merge together by column since they got all the same number of records
- ------------------------------------------------------
+
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
  My understanding of this item is to extract/display or create a subset with those measurement columns
  that got name related to the mean and standard deviation.
  features variable (dataset coming from features.txt file) contain column names and features$V2 is the column with all Field Names.
  Beolow, we will select the Indexes (row number) for only the columns which field names contain either “mean()” or “std()” on it.
  grep if from base library
-------------------------------------------------------------------------------------------
+
  Select from features.txt only those fields that got the text MEAN  or STD on the names
  If other field got values representing MEANS or STD and are name diferently, will be ignore
  subset specific columns from xall (subset with measures)
@@ -93,7 +91,7 @@ Extra step: A final extra step is included at the end to create a file with the 
   Word Gyro is replaced by word "Gyroscope"
   Word Mag is replaced by word "Magnitude"
   Word BodyBody is replaced by word "Body"
- ------------------------------------------------------------------------
+
  Fix header/filed name V1 - An identifier of the subject who carried out the experiment.
  need to recreate all data since the contain of subjectall changed
  Pattern changes
