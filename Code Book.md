@@ -53,7 +53,7 @@ The header/field name of the final Tidy Dataset were change to make those more H
 * String Mag was replaced by word "Magnitude".
 * String BodyBody was replaced by word "Body".
 
-All those changes were executed based in the content of a file named:  features_info located in the directory \data\UCI HAR Dataset\ 
+All those changes were executed based in the content of a file named:  features_info located in the directory: UCI HAR Dataset 
 
 |** Raw data**		| **Tidy data**| 
 
