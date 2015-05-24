@@ -82,7 +82,6 @@ Extra step: A final extra step is included at the end to create a file with the 
   each filed/header name. This is used as a clue to re-label the fields/headers using descriptive names.
   Arbitrarily decided to change every hfields/headers to:
 
-  Convert it to LOWER CASE
   prefix t is replaced by word "time"
   prefix f is replaced by word "frequency"
   prefix () is replaced by empty/blank

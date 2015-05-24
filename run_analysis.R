@@ -1,4 +1,4 @@
-﻿# RNunez
+# RNunez
 # May 23 2015
 # Project Assigment
 # You should create one R script called run_analysis.R that does the following:
@@ -9,6 +9,11 @@
 # 5 - From the data set in step 4, creates a second, independent tidy data set with 
 # the average of each variable for each activity and each subject.
 
+# Merges the training and the test sets to create one data set.
+# Uses descriptive activity names to name the activities in the data set
+# Appropriately labels the data set with descriptive activity names. 
+# Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
+# Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 # -------------------------------------------------------
 # Preliminar steps: Not sure if all the preliminary steps need to be build inside the R script
@@ -116,7 +121,6 @@ alldata    <- cbind(subjectall, yall, xall)
 #  each filed/header name. This is used as a clue to re-label the fields/headers using descriptive names.
 #  Arbitrarily decided to change every hfields/headers to:
 #
-#  Convert it to LOWER CASE
 #  prefix t is replaced by word "time"
 #  prefix f is replaced by word "frequency"
 #  prefix () is replaced by empty/blank
@@ -134,15 +138,14 @@ names(subjectall) <- "subject"
 alldata           <- cbind(subjectall, yall, xall)
 
 # Pattern changes
-names(alldata) <-tolower(gsub("^t", "time-", names(alldata)))
-names(alldata) <-tolower(gsub("^f", "frequency-", names(alldata)))
+names(alldata) <- gsub("^t", "time-", names(alldata))
+names(alldata) <- gsub("^f", "frequency-", names(alldata))
+
+names(alldata) <- gsub("Acc", "Accelerometer", names(alldata))
+names(alldata) <- gsub("Gyro", "Gyroscope", names(alldata))
+names(alldata) <- gsub("Mag", "Magnitude", names(alldata))
+names(alldata) <- gsub("BodyBody", "Body", names(alldata))
 names(alldata) <-        gsub("\\()", "", names(alldata))
-
-names(alldata) <- tolower(gsub("Acc", "Accelerometer", names(alldata)))
-names(alldata) <- tolower(gsub("Gyro", "Gyroscope", names(alldata)))
-names(alldata) <- tolower(gsub("Mag", "Magnitude", names(alldata)))
-names(alldata) <- tolower(gsub("BodyBody", "Body", names(alldata)))
-
 # ------------------------------------------------------------------------
 # 5. From the data set in step 4 (prior step), creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject.
